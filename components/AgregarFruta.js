@@ -1,4 +1,3 @@
-import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import {
   StyleSheet,
@@ -39,7 +38,7 @@ const AgregarFruta = () => {
       setInputText('');
       setInputError('');
     } else {
-      setInputError('Required');
+      setInputError('Debe ingresar un valor de forma obligatoria');
     }
   }
 

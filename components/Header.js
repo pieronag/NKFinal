@@ -16,13 +16,13 @@ const Header = () => {
 
 const styles = StyleSheet.create({
   header: {
-    height: 130,
+    height: 50,
     backgroundColor: '#f1afbb',
   },
   titulo: {
     fontSize: 30,
     textAlign: 'center',
-    paddingTop: 85,
+    paddingTop: 10,
     color: 'white',
     fontFamily: 'KGT'
   },

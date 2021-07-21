@@ -1,3 +1,4 @@
+import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { 
   StyleSheet, 
@@ -21,6 +22,7 @@ const Home = ({ navigation }) => {
                 color="#f1afbb"
                 style={styles.boton}
             />
+            <StatusBar style="auto"></StatusBar>
         </View>
     )
 }
