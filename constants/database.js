@@ -1,0 +1,2 @@
+export const URL_API = 'https://nk-app-9873d-default-rtdb.firebaseio.com/';
+export const URL_AUTH_SIGNUP = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyB8Rdvq9DVujapR7NWfmgnT0W9ScxjWlko';

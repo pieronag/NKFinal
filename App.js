@@ -1,7 +1,15 @@
 import React, { useState } from 'react';
-import Navigator from './components/Navigator.js';
 import { useFonts } from 'expo-font';
 import AppLoading from 'expo-app-loading';
+import { Provider } from 'react-redux';
+import MainNavigator from './navigation';
+
+
+import store from './store';
+
+if (__DEV__) {
+  import('./ReactotronConfig').then(() => console.log('Reactotron Configured'))
+}
 
 export default function App() {
   
@@ -14,6 +22,8 @@ export default function App() {
   if (!dataLoaded) return <AppLoading />
 
   return (
-    <Navigator />
+    <Provider store={store}>
+      <MainNavigator />
+    </Provider>
   );
 }
