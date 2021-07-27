@@ -8,7 +8,7 @@ import { addItem } from '../store/actions/cart.action';
 
 const FruitDetailScreen = ({ navigation }) => {
   const dispatch = useDispatch();
-  const item = useSelector(state => state.breads.selected) || {};
+  const item = useSelector(state => state.fruit.selected) || {};
 
   const handleAddItem = () => dispatch(addItem(item));
 
@@ -20,7 +20,7 @@ const FruitDetailScreen = ({ navigation }) => {
         <Text style={styles.text}>${item.price}</Text>
         <Text style={styles.text}>{item.weight}gr</Text>
       </View>
-      <Button title="AGREGAR AL CARRITO" onPress={handleAddItem} color={Colors.accent} />
+      <Button title="AGREGAR AL CARRITO" onPress={handleAddItem} color={Colors.primary} />
       <ShowCart navigation={navigation} />
     </View>
   )

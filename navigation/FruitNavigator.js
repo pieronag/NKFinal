@@ -14,7 +14,7 @@ const FruitNavigator = () => (
     initialRouteName="Home"
     screenOptions={{
       headerStyle: {
-        backgroundColor: Platform.OS === 'android' ? Colors.primary : '',
+        backgroundColor: Platform.OS === 'android' ? Colors.third : '',
       },
       headerTitleStyle: {
         fontWeight: 'bold',
@@ -25,15 +25,15 @@ const FruitNavigator = () => (
     <BreadStack.Screen
       name="Home"
       component={CategoriesScreen}
-      options={{ title: 'Mi Pan' }}
+      options={{ title: 'Frutas' }}
     />
     <BreadStack.Screen
-      name="BreadCategory"
+      name="FruitCategory"
       component={CategoryFruitScreen}
       options={({ route }) => ({ title: route.params.name })}
     />
     <BreadStack.Screen
-      name="DetailBread"
+      name="DetailFruit"
       component={FruitDetailScreen}
       options={({ route }) => ({ title: route.params.name })}
     />

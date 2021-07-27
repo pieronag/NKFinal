@@ -1,12 +1,12 @@
-export const SELECT_BREAD = 'SELECT_BREAD';
-export const FILTER_BREAD = 'FILTERED_BREAD';
+export const SELECT_FRUIT = 'SELECT_FRUIT';
+export const FILTER_FRUIT = 'FILTERED_FRUIT';
 
-export const selectBread = (id) => ({
-  type: SELECT_BREAD,
+export const selectFruit = (id) => ({
+  type: SELECT_FRUIT,
   breadID: id,
 })
 
-export const filterBread = (id) => ({
-  type: FILTER_BREAD,
+export const filterFruit = (id) => ({
+  type: FILTER_FRUIT,
   categoryID: id,
 })

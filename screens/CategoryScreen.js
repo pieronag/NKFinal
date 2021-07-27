@@ -6,17 +6,17 @@ import { selectCategory } from '../store/actions/category.action';
 
 const CategoriesScreen = ({ navigation }) => {
   const dispatch = useDispatch();
-  const breadCategories = useSelector(state => state.categories.list);
+  const fruitCategories = useSelector(state => state.categories.list);
   
   const handleSelected = (item) => {
     dispatch(selectCategory(item.id));
-    navigation.navigate('BreadCategory', { name: item.name });
+    navigation.navigate('FruitCategory', { name: item.name });
   }
 
   const renderItem = ({ item }) => <CategoryFruitList item={item} onSelected={handleSelected} />
   return (
     <FlatList
-      data={breadCategories}
+      data={fruitCategories}
       renderItem={renderItem}
       keyExtractor={item => item.id}
       numColumns={2}

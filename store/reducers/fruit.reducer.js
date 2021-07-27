@@ -7,21 +7,21 @@ const INITIAL_STATE = {
   selected: null,
 }
 
-const BreadReducer = (state = INITIAL_STATE, action) => {
+const FruitReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case SELECT_FRUIT:
       return {
         ...state,
-        selected: state.list.find(fruit => fruit.id === action.breadID),
+        selected: state.list.find(fruit => fruit.id === action.fruitID),
       };
     case FILTER_FRUIT:
       return {
         ...state,
-        filteredFruits: state.list.filter(fruit => fruit.category === action.categoryID),
+        filteredFruit: state.list.filter(fruit => fruit.category === action.categoryID),
       }
     default:
       return { ...state };
   }
 }
 
-export default BreadReducer;
+export default FruitReducer;

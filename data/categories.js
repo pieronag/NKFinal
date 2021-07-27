@@ -1,22 +1,27 @@
 export const CATEGORIES = [
     {
       id: '1',
-      name: 'Harinas Puras',
-      color: '#ba9593',
+      name: 'Frutas Dulces',
+      color: '#FA570A',
     },
     {
       id: '2',
-      name: 'Harinas Integrales',
-      color: '#387d7a',
+      name: 'Frutas Semi-Dulces',
+      color: '#FFC348',
     },
     {
       id: '3',
-      name: 'Panes Saborizados',
-      color: '#cedfd9',
+      name: 'Frutas Ácidas',
+      color: '#FAE101',
     },
     {
       id: '4',
-      name: 'Otros Productos',
-      color: '#5e4c5a',
+      name: 'Frutas Semi-Ácidas',
+      color: '#97BC03',
     },
+    {
+      id: '5',
+      name: 'Frutas Neutras',
+      color: '#97DF67',
+    }
   ];

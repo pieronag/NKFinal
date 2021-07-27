@@ -15,7 +15,7 @@ const CartItem = ({ item, onDelete }) => {
         <View>
           <Text>${item.price}</Text>
         </View>
-        <Button title="X" onPress={() => onDelete(item.id)} color={Colors.accent} />
+        <Button title="X" onPress={() => onDelete(item.id)} color={Colors.accent1} />
       </View>
     </View>
   )
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
   },
   header: {
-    fontFamily: 'open-sans-bold',
+    fontFamily: 'Quicksand',
   },
   detail: {
     flex: 1,
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 16,
-    fontFamily: 'open-sans',
+    fontFamily: 'Quicksand',
   }
 });
 

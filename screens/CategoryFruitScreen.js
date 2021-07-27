@@ -5,9 +5,9 @@ import FruitItem from '../components/FruitItem';
 import ShowCart from '../components/ShowCart';
 import { filterFruit, selectFruit } from '../store/actions/fruit.action';
 
-const CategoryBreadScreen = ({ navigation }) => {
+const CategoryFruitScreen = ({ navigation }) => {
   const dispatch = useDispatch();
-  const categoryBreads = useSelector(state => state.breads.filteredBreads);
+  const categoryFruit = useSelector(state => state.fruit.filteredFruit);
   const category = useSelector(state => state.categories.selected);
 
   useEffect(() => {
@@ -16,14 +16,14 @@ const CategoryBreadScreen = ({ navigation }) => {
 
   const handleSelected = (item) => {
     dispatch(selectFruit(item.id));
-    navigation.navigate('DetailBread', { name: item.name });
+    navigation.navigate('DetailFruit', { name: item.name });
   }
   const renderItem = ({ item }) => <FruitItem item={item} onSelected={handleSelected} />
 
   return (
     <View>
       <FlatList
-        data={categoryBreads}
+        data={categoryFruit}
         renderItem={renderItem}
         keyExtractor={item => item.id}
       />
@@ -32,4 +32,4 @@ const CategoryBreadScreen = ({ navigation }) => {
   )
 }
 
-export default CategoryBreadScreen;
+export default CategoryFruitScreen;

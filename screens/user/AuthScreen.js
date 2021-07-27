@@ -40,7 +40,7 @@ const AuthScreen = () => {
 
   useEffect(() => {
     if (error) {
-      Alert.alert("Ha ocurrido un error", error, [{ text: 'Ok' }]);
+      Alert.alert("Ha ocurrido un error", error, [{ text: 'OK' }]);
     }
   }, [error]);
 
@@ -80,8 +80,9 @@ const AuthScreen = () => {
       style={styles.screen}
     >
       <View style={styles.container}>
-        <Text style={styles.title}>MI PAN: LOGIN</Text>
-        <View>
+        <Text style={styles.title}>NUTRICIONISTA KATHERINE</Text>
+        <Text style={styles.title}>INICIAR SESIÓN:</Text>
+        <View style={styles.login}>
           <Input
             id="email"
             label="Email"
@@ -108,10 +109,10 @@ const AuthScreen = () => {
         </View>
         <View style={styles.footer}>
           <View style={styles.button}>
-            <Button title="ACCEDER" color={Colors.primary} onPress={() => {}} />
+            <Button title="ACCEDER" color={Colors.third} onPress={onSignupHandler} />
           </View>
           <View style={styles.button}>
-            <Button title="REGISTRARSE" color={Colors.accent} onPress={onSignupHandler} />
+            <Button title="REGISTRARSE" color={Colors.secondary} onPress={() => {}} />
           </View>
         </View>
       </View>
@@ -126,16 +127,20 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
-    fontSize: 24,
-    fontFamily: 'Quicksand',
-    marginBottom: 18,
+    fontSize: 35,
+    fontFamily: 'KGT',
+    marginBottom: 5,
+    textAlign:'center',
   },
   container: {
     width: '80%',
     maxWidth: 400,
-    height: '50%',
-    maxHeight: 400,
+    height: '80%',
+    maxHeight: 700,
     padding: 12,
+  },
+  login: {
+    paddingTop: 80,
   },
   footer: {
     marginTop: 24,
