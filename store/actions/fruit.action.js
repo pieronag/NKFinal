@@ -3,7 +3,7 @@ export const FILTER_FRUIT = 'FILTERED_FRUIT';
 
 export const selectFruit = (id) => ({
   type: SELECT_FRUIT,
-  breadID: id,
+  fruitID: id,
 })
 
 export const filterFruit = (id) => ({
